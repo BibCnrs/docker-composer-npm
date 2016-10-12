@@ -1,4 +1,4 @@
-FROM  composer/composer:1.0.0-alpha10
+FROM  composer/composer:1.2
 
 RUN set -ex \
   && for key in \
@@ -13,7 +13,7 @@ RUN set -ex \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 4.2.1
+ENV NODE_VERSION 6.7
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
